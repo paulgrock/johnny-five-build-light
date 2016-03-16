@@ -1,0 +1,16 @@
+language: node
+
+before_install:
+ - chmod +x ./scripts/*
+ - ./scripts/before_install.sh
+
+script: ./scripts/build.sh
+
+after_success:
+ - ./scripts/after_success.sh
+after_failure:
+- ./scripts/after_failure.sh
+
+# env:
+#   global:
+#     - VARIABLE_NAME=value
