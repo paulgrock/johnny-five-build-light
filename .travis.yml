@@ -12,6 +12,6 @@ after_success:
 after_failure:
 - ./scripts/after_failure.sh
 
-# env:
-#   global:
-#     - VARIABLE_NAME=value
+env:
+  global:
+    - VARIABLE_NAME=value
